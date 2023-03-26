@@ -2,13 +2,11 @@ import { useState } from "react";
 import axios from "axios";
 import { Button } from "@twilio-paste/button";
 import { Box } from "@twilio-paste/core";
-import { ProductConversationsIcon } from "@twilio-paste/icons/esm/ProductConversationsIcon";
 
 import { getToken } from "../../api";
 import { InputType } from "../../types";
 import ModalInputField from "../modals/ModalInputField";
 import styles from "../../styles";
-import TwilioLogo from "../icons/TwilioLogo";
 
 type SetTokenType = (token: string) => void;
 
@@ -45,19 +43,11 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
   const [password, setPassword] = useState("");
 
   return (
-    <Box style={styles.loginContainer}>
-      <Box style={styles.loginContent}>
+    <Box>
+      <Box>
+        <div style={styles.loginTitle}></div>
+        <div style={styles.subTitle}>Test App</div>
         <Box>
-          <ProductConversationsIcon
-            decorative={true}
-            size="sizeIcon90"
-            style={styles.logo}
-            color="colorTextInverse"
-          />
-        </Box>
-        <div style={styles.loginTitle}>Twilio Conversations</div>
-        <div style={styles.subTitle}>Demo experience</div>
-        <Box style={styles.loginForm}>
           <Box style={styles.userInput}>
             <ModalInputField
               label="Username"
@@ -93,7 +83,6 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
           </Box>
           <Box style={styles.loginButton}>
             <Button
-              fullWidth
               disabled={!username || !password}
               variant="primary"
               onClick={async () => {
@@ -108,20 +97,6 @@ const Login: React.FC<LoginProps> = (props: LoginProps) => {
             </Button>
           </Box>
         </Box>
-        <Box style={{ paddingTop: 40 }}>
-          <TwilioLogo />
-        </Box>
-      </Box>
-      <Box style={styles.loginBackground}>
-        <Box
-          style={{
-            height: "100%",
-            width: "100%",
-            backgroundColor: "#06033a",
-            transform: "skewY(-12deg)",
-            transformOrigin: "top right",
-          }}
-        />
       </Box>
     </Box>
   );

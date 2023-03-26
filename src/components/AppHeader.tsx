@@ -1,4 +1,3 @@
-import { ProductConversationsIcon } from "@twilio-paste/icons/esm/ProductConversationsIcon";
 import { UserIcon } from "@twilio-paste/icons/esm/UserIcon";
 import { Avatar } from "@twilio-paste/avatar";
 import { Text } from "@twilio-paste/core";
@@ -34,13 +33,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
   return (
     <div style={styles.appHeader}>
       <div style={styles.flex}>
-        <ProductConversationsIcon
-          color="colorTextInverse"
-          size="sizeIcon70"
-          decorative={false}
-          title="app logo"
-        />
-        <div style={styles.appLogoTitle}>Twilio Conversations</div>
+        <div style={styles.appLogoTitle}></div>
       </div>
       <div style={styles.userTile}>
         <Avatar size="sizeIcon70" name="avatar example" icon={UserIcon} />

@@ -1,6 +1,6 @@
-Feature: Twilio Conversations Demo App
+Feature:  Demo App
 
-  Scenario Outline: As a user, I can log into the Twilio Conversations Demo App using my credentials
+  Scenario Outline: As a user, I can log into the  Demo App using my credentials
 
     Given I am on the login page
     When I login with <username> and <password>
